@@ -213,12 +213,54 @@ a {
 }
 
 
+//footer
 
-
-
-
-
-
+footer{
+    height:40vh;
+    width:100vw;
+    background-color:#000000;
+}
+.footer-container{
+    width:inherit;
+    height:inherit;
+    display:flex;
+    gap:40px;
+    padding:40px 120px;
+}
+.footer-element{
+    width:25%;
+    height:100%;
+    padding:30px;
+    h3{
+        font-size:40px;
+        color:white;
+        text-align:center;
+        padding-bottom:40px;
+    }
+    a{
+        color:white;
+        font-size:20px;
+    }
+}
+.sponsors{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    
+}
+.sponsor-container{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+.ul{
+    width:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
 
 
 
