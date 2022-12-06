@@ -79,7 +79,7 @@ a {
 .header-info {
     width: 100%;
     height: 25%;
-    background-color: #000000;
+    background-color: #000000dc;
     display: flex;
     padding:25px 0px;
     text-align: center;
@@ -113,12 +113,17 @@ a {
     height:150vh;
     width:100vw;
     display:flex;
-    background-size:cover;
-    background-image:url(../img/smoke.jpg);
-    background-position-y:50%;
-    justify-content:center;
+    // justify-content:center;
     flex-direction: column;
     align-items:center;
+}
+
+.bg-img{
+    position:absolute;
+    z-index:-1;
+    background-size:cover;
+    height:150vh;
+    filter:brightness(0.15);
 }
 
 
@@ -219,69 +224,57 @@ footer{
     height:40vh;
     width:100vw;
     background-color:#000000;
+    padding:40px 120px;
 }
+
 .footer-container{
-    width:inherit;
-    height:inherit;
     display:flex;
-    gap:40px;
-    padding:0px 120px;
-    flex-direction: row;
     align-items:center;
-    background-color:red;
-    overflow:hidden;
+    height:100%;
+    width:100%;
+    justify-content:space-between;
+    
 }
-.footer-element{
+.footer-logo{
     width:25%;
     height:100%;
-    padding:30px;
-    h3{
-        font-size:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.foot-logo-img{
+    padding:5vh;
+    filter: invert(100);
+}
+.footer-element{
+    height:100%;
+    padding:50px;
+}
+.footer-links{
+    display:flex;
+    height:100%;
+    align-items:center;
+    justify-content:space-around;
+    width:75%;
+    gap:20px;
+
+    h5{
         color:white;
-        text-align:center;
-        padding-bottom:30px;
+        font-size:30px;
+        padding-bottom:20px;
+        font-family:'Roboto';
+        font-weight:500;
     }
-    a{
-        color:white;
-        font-size:20px;
-    }
-    
 }
-
-.contact{
-    display:flex;
-    flex-direction:column;
-    width:30%;
+.footer-links ul li {
+    padding-bottom:8px;
 }
-
-.contact-container{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
+.footer-links ul li a{
+    color:white;
+    font-family:'Montserrat', sans-serif;
+    font-weight:400;
+    font-size:20px;
 }
-.sponsors{
-    display:flex;
-    flex-direction:column;
-    width:40%;
-    
-}
-.sponsor-container{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-}
-.ul{
-    width:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-
-
 
 
 
