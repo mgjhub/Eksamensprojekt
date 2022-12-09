@@ -7,15 +7,15 @@ const navLinks = document.querySelector(".nav-links");
 
 // change background of navbar
 
-function scrollValue() {
-       var navbar = document.getElementById('navbar');
-       var scroll = window.scrollY;
-       if (scroll < 300) {
-           navbar.classList.remove('scrolled');
-       } else {
-           navbar.classList.add('scrolled');
-       }
-   };
+// function scrollValue() {
+//        var navbar = document.getElementById('navbar');
+//        var scroll = window.scrollY;
+//        if (scroll < 300) {
+//            navbar.classList.remove('scrolled');
+//        } else {
+//            navbar.classList.add('scrolled');
+//        }
+//    };
    
    window.addEventListener('scroll', scrollValue);
    
