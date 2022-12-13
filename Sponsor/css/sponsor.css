@@ -3,65 +3,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
   font-family: "Roboto", sans-serif;
+  max-width: 100%;
 }
 
 /*---Navbar---*/
 .navbar {
   position: fixed;
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 8vh;
-  color: white;
   z-index: 5;
-  background-color: white;
-  transition: 0.2s ease-in;
-  color: white;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0, 0, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  height: 8vh;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  flex-direction: column;
 }
-.navbar ul li .active {
-  color: #EF722A;
-}
-.navbar ul li a {
-  color: white;
-}
-
-.navbar-list {
+.navbar .nav-logo {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
-  gap: 75px;
-  z-index: 1;
-  list-style-type: none;
-  padding: 100px;
+  border-bottom: 1px solid #5a595a;
+  height: 15vh;
 }
-
-.nav-item {
+.navbar .nav-logo img {
+  padding: 10px;
+}
+.navbar .navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  list-style-type: none;
+  margin: auto;
+  height: 100%;
+  padding: 10px;
+}
+.navbar .navbar-list .nav-item {
   font-family: "Roboto Mono" sans-serif;
 }
-.nav-item:hover {
-  color: #b91d73;
-}
-
-.nav-link {
+.navbar .navbar-list .nav-item .nav-link {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
   text-decoration: none;
+  transition: 0.2s;
   color: white;
 }
-
-.active {
+.navbar .navbar-list .nav-item .nav-link:hover {
   color: #EF722A;
-  text-shadow: none;
+}
+.navbar .navbar-list .nav-item .active {
+  color: #EF722A;
 }
 
 .navbar .menu-hamburger {
@@ -78,124 +70,36 @@
 .header {
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/bbqmeat.jpg);
   background-size: cover;
   display: flex;
   justify-content: flex-end;
   z-index: -1;
-  align-items: flex-end;
-  background-position-y: 85%;
-  background-position-x: 100%;
-}
-
-.header-info {
-  width: 100%;
-  height: 25%;
-  background-color: rgba(0, 0, 0, 0.862745098);
-  display: flex;
-  padding: 25px 0px;
-  text-align: center;
-  font-family: "Bebas Neue";
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
-.header-info h1 {
-  color: white;
-  font-size: 30px;
-  letter-spacing: 5px;
-  font-weight: 500;
-  padding-bottom: 25px;
-}
-.header-info .readmore-btn {
-  color: white;
-  border: 3px solid white;
-  width: 15%;
-  padding: 10px;
-  font-size: 15px;
-  letter-spacing: 5px;
+.header img {
+  height: 85vh;
+  width: 100vw;
 }
 
-.covidinfo {
-  height: 100vh;
+.forside-info {
+  height: 150vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-img {
+  position: absolute;
+  z-index: -1;
   background-size: cover;
-  background-image: url(../img/smoke.jpg);
-  background-position-y: 50%;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.covid {
-  width: 60vw;
-  display: flex;
-  color: white;
-  height: 120vh;
-  margin: 120px;
-  overflow: hidden;
-  justify-content: space-between;
-}
-
-.covid-info {
-  padding: 40px;
-  font-family: "Bebas Neue";
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: space-between;
-}
-
-.covid h2 {
-  font-size: 45px;
-  letter-spacing: 7.5px;
-  font-weight: 300;
-  padding-bottom: 10px;
-}
-
-.covid p {
-  font-family: "Montserrat";
-  padding-bottom: 40px;
-  font-size: 18px;
-}
-
-.covid-img {
-  width: 40%;
-}
-
-.card-container {
-  width: 60vw;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 75px;
-}
-
-.info-card {
-  width: 33%;
-  background-color: blue;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-card-readmore-btn {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  border: 2px solid white;
-  padding: 10px;
-  width: 75%;
-  text-align: center;
+  height: 150vh;
+  filter: brightness(0.15);
 }
 
 footer {
-  height: 40vh;
+  height: 35vh;
   width: 100vw;
   background-color: #000000;
   padding: 40px 120px;
@@ -233,10 +137,11 @@ footer {
   justify-content: space-around;
   width: 75%;
   gap: 20px;
+  text-decoration: none;
 }
 .footer-links h5 {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   padding-bottom: 20px;
   font-family: "Roboto";
   font-weight: 500;
@@ -250,8 +155,37 @@ footer {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
+}
+.footer-links ul li a:hover {
+  color: white;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #EF722A;
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+#myBtn:hover {
+  background-color: #000000;
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 900px) {
@@ -293,4 +227,4 @@ footer {
   .menu-hamburger {
     display: block;
   }
-}/*# sourceMappingURL=eventinfo.css.map */
+}/*# sourceMappingURL=sponsor.css.map */
