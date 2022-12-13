@@ -8,60 +8,53 @@
 }
 
 /*---Navbar---*/
+/*---Navbar---*/
 .navbar {
   position: fixed;
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 8vh;
-  color: white;
   z-index: 5;
-  background-color: white;
-  transition: 0.2s ease-in;
-  color: white;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  height: 8vh;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  flex-direction: column;
 }
-.navbar ul li .active {
-  color: #EF722A;
-}
-.navbar ul li a {
-  color: white;
-}
-
-.navbar-list {
+.navbar .nav-logo {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
-  gap: 75px;
-  z-index: 1;
-  list-style-type: none;
-  padding: 100px;
+  border-bottom: 1px solid #5a595a;
+  height: 15vh;
 }
-
-.nav-item {
+.navbar .nav-logo img {
+  padding: 10px;
+}
+.navbar .navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  list-style-type: none;
+  margin: auto;
+  height: 100%;
+  padding: 10px;
+}
+.navbar .navbar-list .nav-item {
   font-family: "Roboto Mono" sans-serif;
 }
-.nav-item:hover {
-  color: #b91d73;
-}
-
-.nav-link {
+.navbar .navbar-list .nav-item .nav-link {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
   text-decoration: none;
+  transition: 0.2s;
   color: white;
 }
-
-.active {
+.navbar .navbar-list .nav-item .nav-link:hover {
   color: #EF722A;
-  text-shadow: none;
+}
+.navbar .navbar-list .nav-item .active {
+  color: #EF722A;
 }
 
 .navbar .menu-hamburger {

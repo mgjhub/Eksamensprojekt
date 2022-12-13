@@ -4,75 +4,71 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width:100%;
-    font-family:'Roboto', sans-serif;
+    max-width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*---Navbar---*/
 
+/*---Navbar---*/
 .navbar {
     position: fixed;
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 8vh;
-    color: white;
-    z-index:5;
-    background-color: white;
-        transition: 0.2s ease-in;
-        color:white;
-        // skaber glas effekten på navbar efter scroll
-        background: rgba(0, 0, 0, 0.6);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
-        height:8vh;
-        ul{
-            li{
-                .active{
-                    color:#EF722A;
+    z-index: 5;
+    // skaber glas effekten på navbar efter scroll
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(50px);
+    flex-direction: column;
+
+    .nav-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #5a595a;
+        height: 15vh;
+
+        img {
+            padding: 10px;
+
+
+        }
+    }
+
+    .navbar-list {
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+        list-style-type: none;
+        margin: auto;
+        height: 100%;
+        padding: 10px;
+
+        .nav-item {
+            font-family: 'Roboto Mono' sans-serif;
+
+            .nav-link {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                font-size: 20px;
+                text-decoration: none;
+                transition: 0.2s;
+                color: white;
+
+                &:hover {
+                    color: #EF722A;
                 }
-                
-                a{
-                    color: white;
-                }
+            }
+
+            .active {
+                color: #EF722A
             }
         }
     }
 
-
-.navbar-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 75px;
-    z-index: 1;
-    list-style-type: none;
-    padding:100px;
 }
 
-.nav-item{
-    font-family: 'Roboto Mono' sans-serif;
-    &:hover{
-        color:#b91d73
-    }
-}
-.nav-link {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-// class skal tilføjes til den side man er på i navigationsbaren
-.active{
-    color:#EF722A;
-    text-shadow: none;
-}
-
-// den her class bliver tilføjet når brugeren scroller ned på siden
 
 .navbar .menu-hamburger {
     display: none;
@@ -83,6 +79,7 @@
     font-size: 35px;
     cursor: pointer;
 }
+
 
 /*---Header---*/
 .header {
@@ -95,7 +92,7 @@
     z-index: -1;
     align-items: flex-end;
     background-position-y: 100%;
-    
+
 }
 
 
@@ -105,75 +102,76 @@
     height: 25%;
     background-color: #000000dc;
     display: flex;
-    padding:25px 0px;
+    padding: 25px 0px;
     text-align: center;
     font-family: 'Bebas Neue';
     flex-direction: column;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
 
     h1 {
         color: white;
         font-size: 30px;
-        letter-spacing:5px;
+        letter-spacing: 5px;
         font-weight: 500;
-        padding-bottom:25px;
+        padding-bottom: 25px;
     }
 
     .readmore-btn {
         color: white;
         border: 3px solid white;
         width: 15%;
-        padding:10px;
-        font-size:15px;
-        letter-spacing:5px;
+        padding: 10px;
+        font-size: 15px;
+        letter-spacing: 5px;
     }
 }
 
 // forside section
 
-.forside-info{
-    height:150vh;
-    width:100vw;
-    display:flex;
-    background-size:cover;
-    background-image:url(../img/smoke.jpg);
-    background-position-y:50%;
-    justify-content:center;
+.forside-info {
+    height: 150vh;
+    width: 100vw;
+    display: flex;
+    background-size: cover;
+    background-image: url(../img/smoke.jpg);
+    background-position-y: 50%;
+    justify-content: center;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
 }
 
 
-.ambbq{
-    width:80vw;
-    display:flex;
-    color:white;
-    height:120vh;
-    margin:120px;
-    overflow:hidden;
-    justify-content:space-between;
-}
-.ambbq-info{   
-    font-family:'Bebas Neue';
-    width:45%;
-    height:100%;
-    align-items:space-between;
+.ambbq {
+    width: 80vw;
+    display: flex;
+    color: white;
+    height: 120vh;
+    margin: 120px;
+    overflow: hidden;
+    justify-content: space-between;
 }
 
-.cookyourself{
+.ambbq-info {
+    font-family: 'Bebas Neue';
     width: 45%;
     height: 100%;
     align-items: space-between;
 }
 
-.starterpack{
+.cookyourself {
     width: 45%;
     height: 100%;
     align-items: space-between;
 }
 
-.appointment{
+.starterpack {
+    width: 45%;
+    height: 100%;
+    align-items: space-between;
+}
+
+.appointment {
     width: 45%;
     height: 100%;
     align-items: space-between;
@@ -183,8 +181,9 @@
 .wrapper {
     margin: 1.5em auto;
     width: 400px;
-  }
-  input {
+}
+
+input {
     outline: none;
     text-align: center;
     border: none;
@@ -196,11 +195,13 @@
     font-family: 'Roboto Mono' sans-serif;
     letter-spacing: 1px;
     color: #b7b3aa;
-  }
-  div {
+}
+
+div {
     text-align: center;
-  }
-  button {
+}
+
+button {
     text-align: center;
     background-color: #EF722A;
     outline: none;
@@ -211,123 +212,134 @@
     color: white;
     letter-spacing: 1px;
     transition: all .3s;
+
     &:hover {
-      background-color: white;
-      cursor: pointer;
-      transition: all .3s;
-      color: #EF722A;
+        background-color: white;
+        cursor: pointer;
+        transition: all .3s;
+        color: #EF722A;
     }
-  }
-
-.ambbq h2{
-    font-size:45px;
-    letter-spacing:7.5px;
-    font-weight:300;
-    padding-bottom:10px;
-}
-.ambbq p{
-    font-family:'Montserrat';
-    padding-bottom:25px;
-    font-size:18px;
 }
 
-.ambbq b{
-    font-family:'Montserrat';
-    padding-bottom:40px;
-    font-size:20px;
+.ambbq h2 {
+    font-size: 45px;
+    letter-spacing: 7.5px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+.ambbq p {
+    font-family: 'Montserrat';
+    padding-bottom: 25px;
+    font-size: 18px;
+}
+
+.ambbq b {
+    font-family: 'Montserrat';
+    padding-bottom: 40px;
+    font-size: 20px;
 
 }
-.ambbq-img{
-    width:40%;
+
+.ambbq-img {
+    width: 40%;
 }
 
 // forskellige kategorier
 
-.card-container{
-    width:60vw;
-    height:50vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:75px;
+.card-container {
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
 }
-.info-card{
-    width:33%;
-    background-color:blue;
-    height:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    
+
+.info-card {
+    width: 33%;
+    background-color: blue;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
 }
-.info-card-readmore-btn{
-    color:white;
-    font-family:'Roboto', sans-serif;
-    font-size:30px;
-    font-weight:500;
-    border:2px solid white;
-    padding:10px;
-    width:75%;
-    text-align:center;
+
+.info-card-readmore-btn {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    border: 2px solid white;
+    padding: 10px;
+    width: 75%;
+    text-align: center;
 }
 
 
 //footer
 
-footer{
-    height:40vh;
-    width:100vw;
-    background-color:#000000;
-    padding:40px 120px;
+footer {
+    height: 40vh;
+    width: 100vw;
+    background-color: #000000;
+    padding: 40px 120px;
 }
 
-.footer-container{
-    display:flex;
-    align-items:center;
-    height:100%;
-    width:100%;
-    justify-content:space-between;
-    
-}
-.footer-logo{
-    width:25%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.foot-logo-img{
-    padding:5vh;
-}
-.footer-element{
-    height:100%;
-    padding:50px;
-}
-.footer-links{
-    display:flex;
-    height:100%;
-    align-items:center;
-    justify-content:space-around;
-    width:75%;
-    gap:20px;
+.footer-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
 
-    h5{
-        color:white;
-        font-size:30px;
-        padding-bottom:20px;
-        font-family:'Roboto';
-        font-weight:500;
+}
+
+.footer-logo {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot-logo-img {
+    padding: 5vh;
+}
+
+.footer-element {
+    height: 100%;
+    padding: 50px;
+}
+
+.footer-links {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    gap: 20px;
+
+    h5 {
+        color: white;
+        font-size: 30px;
+        padding-bottom: 20px;
+        font-family: 'Roboto';
+        font-weight: 500;
     }
 }
+
 .footer-links ul li {
-    padding-bottom:8px;
+    padding-bottom: 8px;
 }
-.footer-links ul li a{
-    color:white;
-    font-family:'Montserrat', sans-serif;
-    font-weight:400;
-    font-size:20px;
+
+.footer-links ul li a {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -339,7 +351,7 @@ footer{
     z-index: 99;
     border: none;
     outline: none;
-    background-color:#EF722A;
+    background-color: #EF722A;
     color: white;
     /* Text color */
     cursor: pointer;
@@ -353,7 +365,7 @@ footer{
 }
 
 #myBtn:hover {
-    background-color:#000000;
+    background-color: #000000;
     transform: scale(1.2);
 }
 
