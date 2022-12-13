@@ -7,7 +7,6 @@
   max-width: 100%;
 }
 
-/*---Navbar---*/
 .navbar {
   position: fixed;
   display: flex;
@@ -23,7 +22,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  border: none;
+  border-bottom: 1px solid #5a595a;
   height: 15vh;
 }
 .navbar .nav-logo img {
