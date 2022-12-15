@@ -141,25 +141,186 @@
   position: absolute;
 }
 
-.competition-info {
-  margin: 120px 250px;
-  max-width: 100vw;
-  height: 100%;
-  color: white;
-  font-family: "Montserrat";
+.container {
+  margin: 120px 16.66%;
+  padding-top: 10vh;
+  max-width: 100%;
+  height: 110vh;
+  display: flex;
+  gap: 5vw;
 }
-.competition-info .row1 h3 {
+.container .row-1 {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 50%;
+  align-items: space-between;
+  justify-content: space-between;
+}
+.container .row-1 .text {
+  height: 50%;
+}
+.container .row-1 img {
+  height: 70%;
+}
+.container .row-2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container .row-2 .text {
+  height: 40%;
+}
+.container .row-2 img {
+  height: 60%;
+}
+.container h3 {
   color: #EF722A;
-  font-size: 25px;
+  font-size: 40px;
   text-transform: uppercase;
+  font-family: "Roboto";
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.container p {
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat";
+  line-height: 1.5em;
+  padding-bottom: 10px;
 }
 
 .bg-img {
   position: absolute;
   z-index: -1;
   background-size: cover;
-  height: 150vh;
+  height: 180vh;
   filter: brightness(0.15);
+}
+
+.sign-up {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin-left: 25%;
+  margin-right: 25%;
+  align-self: center;
+}
+.sign-up h3 {
+  color: #EF722A;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  padding-bottom: 16px;
+}
+.sign-up p {
+  color: white;
+  font-size: 18px;
+  font-family: "Montserrat";
+  padding-bottom: 20px;
+}
+.sign-up p a {
+  color: #EF722A;
+}
+
+.btns {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 5%;
+  margin-bottom: 100px;
+}
+.btns button {
+  text-align: center;
+  background-color: #EF722A;
+  text-transform: uppercase;
+  padding: 0.8em 1.3em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+.btns button a {
+  color: white;
+  text-decoration: none;
+}
+.btns button:hover {
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #EF722A;
+}
+.btns button:hover a {
+  color: #EF722A;
+}
+
+footer {
+  height: 35vh;
+  width: 100vw;
+  background-color: #000000;
+  padding: 40px 120px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-logo-img {
+  padding: 5vh;
+}
+
+.footer-element {
+  height: 100%;
+  padding: 50px;
+}
+
+.footer-links {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  width: 75%;
+  gap: 20px;
+  text-decoration: none;
+}
+.footer-links h5 {
+  color: white;
+  font-size: 25px;
+  padding-bottom: 20px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.footer-links ul li {
+  padding-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+}
+.footer-links ul li a:hover {
+  color: white;
 }
 
 #myBtn {
