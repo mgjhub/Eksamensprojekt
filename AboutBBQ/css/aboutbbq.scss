@@ -99,7 +99,7 @@
     align-items: flex-end;
     background-position-y: 100%;
     .hero-img{
-        filter: brightness(0.5);
+        filter: brightness(30%);
         position:absolute;
     }
     h1{
@@ -111,7 +111,63 @@
     }
 }
 
+.caption {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    padding-top:20%;
+    font-family: 'Roboto';
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
 
+    h1 {
+        font-size: 100px;
+        color: #EF722A;
+        font-weight:500;
+    }
+
+    h3 {
+        color: white;
+        font-size: 40px;
+
+        span {
+            border-bottom: 5px solid #EF722A;
+        }
+    }
+
+}
+
+.scrolldown-btn {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+.scrolldown-btn::before {
+    animation: bounce 1.5s ease infinite;
+    color: #EF722A;
+    content: '╲╱';
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 6rem;
+    left: 50%;
+    letter-spacing: -1px;
+    margin-left: -3rem;
+    opacity: 0.8;
+    position: absolute;
+    text-align: center;
+    width: 6rem;
+    bottom: 0;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-50%);
+    }
+}
 
 .header-info {
     width: 100%;

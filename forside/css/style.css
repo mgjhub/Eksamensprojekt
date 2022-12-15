@@ -24,15 +24,101 @@
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #5a595a;
+  position: relative;
   height: 15vh;
 }
 .navbar .nav-logo img {
   padding: 10px;
 }
+.navbar .switch {
+  position: relative;
+  display: inline-block;
+  margin: 25px;
+  position: absolute;
+  right: 0;
+  border: 2px solid white;
+  border-radius: 20%/50%;
+}
+.navbar .switch > span {
+  position: absolute;
+  top: 12px;
+  pointer-events: none;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  width: 50%;
+  text-align: center;
+}
+.navbar input.check-toggle-round-flat:checked ~ .off {
+  color: black;
+}
+.navbar input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+.navbar .switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: black;
+}
+.navbar .switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: white;
+}
+.navbar .check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.navbar .check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.navbar input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 97px;
+  height: 35px;
+  background-color: black;
+  border-radius: 60px;
+}
+.navbar input.check-toggle-round-flat + label:before, .navbar input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.navbar input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: black;
+  -webkit-moz-border-radius: 60px;
+  border-radius: 60px;
+}
+.navbar input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: #fff;
+  border-radius: 52px;
+  transition: margin 0.2s;
+}
+.navbar input.check-toggle-round-flat:checked + label:after {
+  margin-left: 44px;
+}
 .navbar .navbar-list {
   display: flex;
   justify-content: space-evenly;
-  width: 60%;
+  width: 50%;
   list-style-type: none;
   margin: auto;
   height: 100%;

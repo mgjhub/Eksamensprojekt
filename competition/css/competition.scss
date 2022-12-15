@@ -89,10 +89,10 @@
 }
 
 .caption {
-    height: 50%;
+    height: 100%;
     width: 100%;
     z-index: 1;
-    margin-top: 20vh;
+    padding-top:20%;
     font-family: 'Roboto';
     display: flex;
     flex-direction: column;
@@ -101,6 +101,7 @@
     h1 {
         font-size: 100px;
         color: #EF722A;
+        font-weight:500;
     }
 
     h3 {
@@ -149,6 +150,7 @@
     filter: brightness(30%);
     z-index: -1;
     position: absolute;
+    width:100%;
 }
 
 
@@ -282,7 +284,7 @@
         text-align: center;
         background-color: #EF722A;
         text-transform: uppercase;
-        padding: 0.8em 1.3em;
+        padding: 1em 1.5em;
         font-weight: bold;
         color: white;
         letter-spacing: 1px;
