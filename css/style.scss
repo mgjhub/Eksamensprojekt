@@ -52,7 +52,7 @@ body{
     display:flex;
     justify-content:space-evenly;
     align-items:center;
-    padding:10vh     15vw;
+    padding:40vh     15vw;
     h1{
         color:#EF722A;
         font-size:50px;
@@ -90,5 +90,43 @@ body{
         &:hover{
             transform: scale(1.1);
         }
+    }
+}
+
+@media screen and (max-width:1200px){
+    .text h1{
+        font-size:50px;
+    }
+    .text h5{
+        font-size:20px;
+    }
+}
+@media screen and (max-width:900px){
+    .language-container{
+        flex-direction: column;
+        padding-top:30vh;
+    }
+    .language-container .danish{
+        height:250px;
+        width:250px;
+    }
+    .language-container .english{
+        height:250px;
+        width:250px;
+    }
+}    
+
+@media screen and (max-width:600px){
+    .text{
+        width:100%;
+        text-align:center;
+    }
+    .language-container .danish{
+        height:200px;
+        width:200px;
+    }
+    .language-container .english{
+        height:200px;
+        width:200px;
     }
 }
