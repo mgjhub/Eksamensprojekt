@@ -466,6 +466,12 @@ footer {
 }
 
 @media screen and (max-width:450px) {
+  *{
+    max-width:100%;
+  }
+  body{
+    background-color:black;
+  }
   .nav-links {
       max-width: 100%;
 
