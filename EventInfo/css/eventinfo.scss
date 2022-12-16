@@ -115,6 +115,186 @@
 
 }
 
+//Px to em
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @return $pixels / $context * 1em;
+}
+$tablet: em(767);
+.box {
+  max-width: em(1200);
+  margin: 1em auto;
+}
+.infoTable {
+  overflow-x: auto;
+  margin: 1em 0;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: sans-serif;
+  font-size: em(18);
+  line-height: 1.1;
+  border-collapse: collapse;
+  color: white;
+  max-width: 100%;
+  width: auto;
+  margin: 1em;
+  tr {
+    & td:first-child {
+      font-size: em(26);
+      border-right: none;
+      color: #EF722A;
+      padding: 1em em(5) em(10) 0;
+    }
+    & td:last-child {
+      border-right: none;
+    }
+  }
+  td {
+    padding: em(16);
+    border-bottom: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+  }
+
+  td span {color:#EF722A;}
+
+  //make td equal sized
+  td[class*="track"] {
+    width: 30%;
+    position: relative;
+    span {
+      display: none;
+    }
+  }
+  .infoTable-multitrack td:nth-child(2),
+  .infoTable-controls td:nth-child(3),
+  .infoTable-controls td:nth-child(4) {
+    width: 30%;
+  }
+  .trackName {
+    display: none;
+  }
+}
+/*Collapsable mobile table if js enabled*/
+.isJs-template {
+  @media screen and (max-width: $tablet) {
+    .infoTable {
+      td {
+        border-right: none;
+      }
+    }
+    .infoTable-btn {
+      cursor: pointer;
+      span,
+      a {
+        font-size: 16px;
+        text-decoration: none;
+        line-height: 1;
+        font-size: em(26, 18);
+      }
+    }
+    td:empty {
+       display: inherit;//table-row; dispaly:none breaks layout
+       border-bottom: none;
+    }
+    .infoTable-multitrack td:nth-child(2),
+    .infoTable-multitrack td:nth-child(3),
+    .infoTable-multitrack td:nth-child(4) {
+      padding-left: 2em;
+      opacity: 0;
+      width: 0;
+      display: none;
+      &.showTableCol {
+        display: table-cell !important;
+        width: 100% !important;
+        opacity: 1 !important;
+      }
+    }
+    .infoTable-btn {
+      padding: 0;
+      border: none;
+      p {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 0 2em;
+        margin: 0;
+        flex: 1 1 33%;
+      }
+      span {
+        display: block;
+        border-bottom: 1px solid #d6d6d6;
+        border-right:  1px solid #d6d6d6;
+        text-align: center;
+        padding: 10px 12px 8px 12px;
+        width: 100%;
+        flex-basis: 100%;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+    @supports (display: grid) {
+      .infoTable-btn  {
+        p {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          justify-content: space-between;
+        }
+        span {
+          width: auto
+        }
+      }
+    }
+    .infoTable-tab--active {
+      color: #EF722A;
+      border-bottom: none !important;
+    }   
+  }
+  tfoot td {
+    border-top: 1px solid #d6d6d6;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .infoTable-controls  {
+    display: none;
+  }
+  .infoTable {
+    table-layout: fixed;
+    td {
+     vertical-align: middle; 
+     padding: em(16,18);
+    }
+    .trackName {
+      display: block;
+      position: absolute;
+      width: 140px;
+      color: #EF722A;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.6);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 5px;
+      height: 20px;
+      line-height: 1;
+      font-size: 20px;
+    }
+    .trackName + span {
+      display: block;
+      margin-top: 35px;
+    }
+  }
+  .infoTable-btn {
+    display: none;
+  }
+  tbody {
+    td {
+      position: relative;
+    }
+  }
+}
+
+
 .scrolldown-btn {
     height: 100vh;
     position: relative;
