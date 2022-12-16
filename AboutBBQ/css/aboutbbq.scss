@@ -9,49 +9,34 @@
 }
 
 /*---Navbar---*/
-
-/*---Navbar---*/
 .navbar {
     position: fixed;
     display: flex;
     width: 100%;
-    z-index: 5;
+    z-index: 1000;
     // skaber glas effekten på navbar efter scroll
     background: rgba(0, 0, 0, 0.6);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(50px);
     flex-direction: column;
 
-    .nav-logo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        border-bottom: 1px solid #5a595a;
-        height: 15vh;
-
-        img {
-            padding: 10px;
-
-
-        }
-    }
-
-    .navbar-list {
+    .nav-links {
         display: flex;
         justify-content: space-evenly;
-        width: 60%;
+        width: 50%;
         list-style-type: none;
         margin: auto;
         height: 100%;
         padding: 10px;
+        text-transform: uppercase;
 
-        .nav-item {
+        li {
             font-family: 'Roboto Mono' sans-serif;
 
-            .nav-link {
+            a {
                 font-family: 'Roboto', sans-serif;
                 font-weight: 500;
-                font-size: 20px;
+                font-size: 18px;
                 text-decoration: none;
                 transition: 0.2s;
                 color: white;
@@ -67,17 +52,22 @@
         }
     }
 
-}
+    .nav-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #5a595a;
+        position: relative;
+        height: 15vh;
+
+        img {
+            padding: 10px;
+        }
+
+    }
 
 
-.navbar .menu-hamburger {
-    display: none;
-    color: black;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    font-size: 35px;
-    cursor: pointer;
+
 }
 
 .bg-img {
@@ -89,7 +79,7 @@
 }
 
 /*---Header---*/
-.header {
+.hero {
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -101,21 +91,15 @@
     .hero-img{
         filter: brightness(30%);
         position:absolute;
-    }
-    h1{
-        z-index:1;
-        color:white;
-        bottom:50%;
-        left:20%;
-        font-size:100px;
+        height:100%;
+        width:100%;
     }
 }
-
 .caption {
     height: 100vh;
     width: 100%;
     z-index: 1;
-    padding-top:20%;
+    padding-top:40vh;
     font-family: 'Roboto';
     display: flex;
     justify-content:center;
@@ -169,6 +153,9 @@
     }
 }
 
+
+
+
 .header-info {
     width: 100%;
     height: 25%;
@@ -183,7 +170,7 @@
     h1 {
         color: white;
         font-size: 30px;
-        letter-spacing: 5px;
+        // letter-spacing: 5px;
         font-weight: 500;
         padding-bottom: 25px;
     }
@@ -217,18 +204,28 @@
     width: 100vw;
     display: flex;
     color: white;
-    height: 40vh;
+    height: 30vh;
     // justify-content: space-between;
     justify-content: center;
-    gap: 10vw;
+    gap: 5vw;
 
     .inner-element {
         width: 30%;
+        height:10vh;
+        h2{
+            font-weight:500;
+        }
+        p{
+            font-family:'Montserrat', sans-serif;
+            font-weight:400;
+            a{
+                color:#EF722A;
+            }
+        }
     }
 }
 
 .ambbq-info {
-    font-family: 'Bebas Neue';
     width: 50%;
     height: 100%;
     align-items: space-between;
@@ -246,27 +243,8 @@
     align-items: space-between;
 }
 
-.appointment {
-    width: 45%;
-    height: 100%;
-    align-items: space-between;
-    // margin: auto;
-}
 
 
-input {
-    outline: none;
-    text-align: center;
-    border: none;
-    border-bottom: 1px solid #c6c8ca;
-    width: 100%;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-size: 20px;
-    font-family: 'Roboto Mono' sans-serif;
-    letter-spacing: 1px;
-    color: #b7b3aa;
-}
 
 #shopnow {
     display: flex;
@@ -283,12 +261,19 @@ button {
     color: white;
     letter-spacing: 1px;
     transition: all .3s;
-
+    a{
+        color:white;
+        text-decoration: none;
+       
+    }
     &:hover {
         background-color: white;
         cursor: pointer;
         transition: all .3s;
         color: #EF722A;
+        a{
+            color:#EF722A;
+        }
     }
 }
 
@@ -309,56 +294,15 @@ button {
     line-height: 30px;
 }
 
-.ambbq b {
-    font-family: 'Montserrat';
-    padding-bottom: 40px;
-    font-size: 20px;
-
-}
 
 
-.ambbq-img {
-    width: 40%;
-}
 
-// forskellige kategorier
-
-.card-container {
-    width: 60vw;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 75px;
-}
-
-.info-card {
-    width: 33%;
-    background-color: blue;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.info-card-readmore-btn {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-    border: 2px solid white;
-    padding: 10px;
-    width: 75%;
-    // text-align: center;
-}
 
 
 //footer
 
 footer {
-    height: 40vh;
+    height: 35vh;
     width: 100vw;
     background-color: #000000;
     padding: 40px 120px;
@@ -383,24 +327,30 @@ footer {
 
 .foot-logo-img {
     padding: 5vh;
+
+
 }
 
 .footer-element {
     height: 100%;
     padding: 50px;
+    display:flex;
+    flex-direction:column;
+    text-align:left;
 }
 
 .footer-links {
     display: flex;
     height: 100%;
-    // align-items: center;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     width: 75%;
     gap: 20px;
+    text-decoration: none;
 
     h5 {
         color: white;
-        font-size: 30px;
+        font-size: 25px;
         padding-bottom: 20px;
         font-family: 'Roboto';
         font-weight: 500;
@@ -415,8 +365,12 @@ footer {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
+
+    &:hover {
+        color: white;
+    }
 }
 
 #myBtn {
@@ -446,52 +400,132 @@ footer {
 }
 
 
-@media screen and (max-width:900px) {
-    .navbar {
-        padding: 0;
-    }
 
-    .navbar .logo {
-        display: none;
+//styling til medium
+@media screen and (max-width:1300px) {
+   
+    .foot-logo-img{
+        display:none;
     }
-
-    .navbar .menu-hamburger {
-        display: block;
+    .footer-logo{
+        display:none;
     }
-
+    .footer-links{
+        justify-content:space-evenly;
+        width:100%;
+    }
+    .forside-info .ambbq{
+        padding-bottom:40vh;
+    }
+    .forside-info .ambbq .inner-element h2{
+        letter-spacing:0;
+    }
+}
+@media screen and (max-width:1000px){
+    .forside-info .ambbq .inner-element h2{
+        font-size:25px;
+    }
+    .hero .caption h1{
+        font-size:50px;
+    }
+    .hero .caption h3{
+        font-size:25px;
+    }
+    .footer-container .footer-links .footer-element{
+        padding:0;
+    }
+    .forside-info .ambbq{
+        max-height:100%;
+        // height:50vh;
+        padding:0;
+        height:100%;
+    }
+    .forside-info .ambbq-1{
+        flex-direction: row;
+        width:100vw;
+        .inner-element{
+            padding-top:50px;
+            padding-bottom:50px;
+            height:100%;
+        }
+    }
+    .forside-info .ambbq-2{
+        flex-direction:column;
+        align-items:center;
+        width:100vw;
+    }
+    .forside-info .ambbbq-2 .bbq-pic{
+        height:0;
+        width:0;
+    }
+    .ambbq img{
+        display:none;
+    }
     .nav-links {
-        top: 0;
-        left: -100%;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(8px);
         width: 100%;
-        height: 100vh;
-        transition: left 0.5s ease;
+        gap:10%;
+    }
+    .forside-info .ambbq-2 .inner-element{
+        height:100%;
+    }
+}
+
+//styling til små skærme
+@media screen and (max-width:600px) {
+    .nav-links {
+        width: 100%;
+        gap:10%;
+    }
+  
+    footer{
+        height:40vh;
+        width:100%;
+    }
+    .forside-info{
+        width:100%;
+        height:100%;
+        p{
+            font-size:15px;
+        }
+    }
+    
+    .footer-container .footer-links .footer-element{
+        padding:0;
+    }
+    .forside-info .ambbq{
+        max-height:100%;
+        padding:0;
+
+    }
+    .forside-info .ambbq-1{
+        padding-top:50px;
+        h2{
+            text-align:center;
+        }
+    }
+    
+    .forside-info .ambbq-1 .inner-element{
+        flex-direction:column;
+        width:40%;
+    }
+    .forside-info .ambbq-1 .inner-element p{
+        width:100%;
+    }
+    .forside-info .ambbq-2{
+        margin-bottom:100px;
+        margin-top:100px;
+        width:100%
+    }
+    .forside-info .ambbq-2 .inner-element{
+        width:80%;
+        h2{
+            text-align:center;
+        }
 
     }
 
-    .nav-links.mobile-menu {
-        left: 0;
 
-    }
 
-    .nav-links ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .navbar .nav-links ul li {
-        margin: 25px 0;
-        font-size: 1.2em;
-    }
-
-    .menu-hamburger {
-        display: block;
-    }
 
 }
