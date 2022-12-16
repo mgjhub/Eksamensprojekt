@@ -1,0 +1,485 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+/*---Navbar---*/
+.navbar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  flex-direction: column;
+}
+.navbar .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  list-style-type: none;
+  margin: auto;
+  height: 100%;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.navbar .nav-links li {
+  font-family: "Roboto Mono" sans-serif;
+}
+.navbar .nav-links li a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.2s;
+  color: white;
+}
+.navbar .nav-links li a:hover {
+  color: #EF722A;
+}
+.navbar .nav-links li .active {
+  color: #EF722A;
+}
+.navbar .nav-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #5a595a;
+  position: relative;
+  height: 15vh;
+}
+.navbar .nav-logo img {
+  padding: 10px;
+}
+
+/*---Header---*/
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  z-index: -1;
+  align-items: flex-end;
+  background-position-y: 100%;
+}
+.hero .hero-img {
+  filter: brightness(30%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.caption {
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  padding-top: 40vh;
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.caption h1 {
+  font-size: 100px;
+  color: #EF722A;
+  font-weight: 500;
+}
+.caption h3 {
+  color: white;
+  font-size: 40px;
+}
+.caption h3 span {
+  border-bottom: 5px solid #EF722A;
+}
+
+.scrolldown-btn {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.scrolldown-btn::before {
+  -webkit-animation: bounce 1.5s ease infinite;
+          animation: bounce 1.5s ease infinite;
+  color: #EF722A;
+  content: "╲╱";
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 6rem;
+  left: 50%;
+  letter-spacing: -1px;
+  margin-left: -3rem;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;
+  width: 6rem;
+  bottom: 0;
+}
+
+@-webkit-keyframes bounce {
+  50% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-50%);
+  }
+}
+.forside-info {
+  height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0% 8.33%;
+  background-size: cover;
+  background-image: url(../../img/smoke33333.png);
+}
+
+.ambbq {
+  display: flex;
+  color: white;
+  height: 50%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.ambbq .inner-element {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+.ambbq .inner-element h2 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 40px;
+}
+.ambbq .inner-element p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.ambbq .inner-element p a {
+  color: #EF722A;
+}
+
+.ambbq-info {
+  width: 50%;
+  height: 100%;
+  align-items: space-between;
+}
+
+.cookyourself {
+  width: 45%;
+  height: 100%;
+  align-items: space-between;
+}
+
+.starterpack {
+  width: 45%;
+  height: 100%;
+  align-items: space-between;
+}
+
+#shopnow {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+button {
+  text-align: center;
+  background-color: #EF722A;
+  text-transform: uppercase;
+  padding: 0.8em 1.3em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+button a {
+  color: white;
+  text-decoration: none;
+}
+button:hover {
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #EF722A;
+}
+button:hover a {
+  color: #EF722A;
+}
+
+.ambbq h2 {
+  font-size: 45px;
+  letter-spacing: 7.5px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  color: #EF722A;
+}
+
+.ambbq p {
+  font-family: "Montserrat";
+  padding-bottom: 25px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+footer {
+  height: 35vh;
+  width: 100vw;
+  background-color: #000000;
+  padding: 40px 120px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-logo-img {
+  padding: 5vh;
+}
+
+.footer-element {
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-links {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  gap: 20px;
+  text-decoration: none;
+}
+.footer-links h5 {
+  color: white;
+  font-size: 25px;
+  padding-bottom: 20px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.footer-links ul li {
+  padding-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+}
+.footer-links ul li a:hover {
+  color: white;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #EF722A;
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+#myBtn:hover {
+  background-color: #000000;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1300px) {
+  .foot-logo-img {
+    display: none;
+  }
+  .footer-logo {
+    display: none;
+  }
+  .footer-links {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .forside-info .ambbq {
+    padding-bottom: 40vh;
+  }
+  .forside-info .ambbq .inner-element h2 {
+    letter-spacing: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .forside-info .ambbq {
+    flex-direction: column;
+  }
+  .forside-info .ambbq .inner-element h2 {
+    font-size: 25px;
+  }
+  .hero .caption h1 {
+    font-size: 50px;
+  }
+  .hero .caption h3 {
+    font-size: 25px;
+  }
+  .footer-container .footer-links .footer-element {
+    padding: 0;
+  }
+  .forside-info .ambbq {
+    max-height: 100%;
+    padding: 0;
+    height: 100%;
+  }
+  .footer-links {
+    width: 100vw;
+  }
+  .footer-links h5 {
+    font-size: 20px;
+  }
+  .footer-links .forside-info .ambbq-1 {
+    flex-direction: row;
+    width: 100vw;
+  }
+  .footer-links .forside-info .ambbq-1 .inner-element {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100%;
+  }
+  .footer-links .forside-info .ambbq-2 {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+  .footer-links .forside-info .ambbbq-2 .bbq-pic {
+    height: 0;
+    width: 0;
+  }
+  .footer-links .ambbq img {
+    display: none;
+  }
+  .footer-links .nav-links {
+    width: 100%;
+    gap: 10%;
+  }
+  .footer-links .forside-info .ambbq-2 .inner-element {
+    height: 100%;
+  }
+  footer {
+    height: auto;
+  }
+  .nav-links {
+    max-width: 100%;
+  }
+  .navbar .nav-links li .nav-link {
+    font-size: 12px;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav-links {
+    width: 100%;
+    gap: 10%;
+  }
+  footer {
+    height: auto;
+    width: 100%;
+  }
+  .forside-info {
+    width: 100%;
+    height: 100%;
+  }
+  .forside-info p {
+    font-size: 15px;
+  }
+  .footer-container .footer-links .footer-element {
+    padding: 0;
+  }
+  .forside-info .ambbq {
+    max-height: 100%;
+    padding: 0;
+  }
+  .forside-info .ambbq-1 {
+    padding-top: 50px;
+  }
+  .forside-info .ambbq-1 h2 {
+    text-align: center;
+  }
+  .forside-info .ambbq-1 .inner-element {
+    flex-direction: column;
+    width: 40%;
+  }
+  .forside-info .ambbq-1 .inner-element p {
+    width: 100%;
+  }
+  .forside-info .ambbq-2 {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    width: 100%;
+  }
+  .forside-info .ambbq-2 .inner-element {
+    width: 80%;
+  }
+  .forside-info .ambbq-2 .inner-element h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 475px) {
+  .nav-links {
+    max-width: 100%;
+  }
+  .navbar .nav-links li .nav-link {
+    font-size: 12px;
+    align-self: center;
+  }
+  .hero .caption h1 {
+    font-size: 40px;
+  }
+  .hero .caption h3 {
+    text-align: center;
+  }
+  .footer-container .footer-links .footer-element h5 {
+    font-size: 15px;
+  }
+  .footer-container .footer-links .footer-element ul li a {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=aboutbbq.css.map */
