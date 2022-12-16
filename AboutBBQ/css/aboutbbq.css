@@ -13,7 +13,7 @@
   position: fixed;
   display: flex;
   width: 100%;
-  z-index: 1000;
+  z-index: 50;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(50px);
@@ -57,14 +57,6 @@
 }
 .navbar .nav-logo img {
   padding: 10px;
-}
-
-.bg-img {
-  position: absolute;
-  z-index: -1;
-  background-size: cover;
-  height: 150vh;
-  filter: brightness(0.15);
 }
 
 /*---Header---*/
@@ -145,57 +137,34 @@
     transform: translateY(-50%);
   }
 }
-.header-info {
-  width: 100%;
-  height: 25%;
-  background-color: rgba(0, 0, 0, 0.862745098);
-  display: flex;
-  padding: 25px 0px;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.header-info h1 {
-  color: white;
-  font-size: 30px;
-  font-weight: 500;
-  padding-bottom: 25px;
-}
-.header-info .readmore-btn {
-  color: white;
-  border: 3px solid white;
-  width: 15%;
-  padding: 10px;
-  font-size: 15px;
-  letter-spacing: 5px;
-}
-
 .forside-info {
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
-  background-size: cover;
-  background-position-y: 50%;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 0% 8.33%;
+  background-size: cover;
+  background-image: url(../../img/smoke33333.png);
 }
 
 .ambbq {
-  width: 100vw;
   display: flex;
   color: white;
-  height: 30vh;
-  justify-content: center;
-  gap: 5vw;
+  height: 50%;
+  width: 100%;
+  justify-content: space-evenly;
 }
 .ambbq .inner-element {
-  width: 30%;
-  height: 10vh;
+  width: 100%;
+  height: auto;
+  padding: 50px;
 }
 .ambbq .inner-element h2 {
   font-weight: 500;
+  text-align: center;
+  font-size: 40px;
 }
 .ambbq .inner-element p {
   font-family: "Montserrat", sans-serif;
@@ -380,6 +349,9 @@ footer {
   }
 }
 @media screen and (max-width: 1000px) {
+  .forside-info .ambbq {
+    flex-direction: column;
+  }
   .forside-info .ambbq .inner-element h2 {
     font-size: 25px;
   }
@@ -397,33 +369,49 @@ footer {
     padding: 0;
     height: 100%;
   }
-  .forside-info .ambbq-1 {
+  .footer-links {
+    width: 100vw;
+  }
+  .footer-links h5 {
+    font-size: 20px;
+  }
+  .footer-links .forside-info .ambbq-1 {
     flex-direction: row;
     width: 100vw;
   }
-  .forside-info .ambbq-1 .inner-element {
+  .footer-links .forside-info .ambbq-1 .inner-element {
     padding-top: 50px;
     padding-bottom: 50px;
     height: 100%;
   }
-  .forside-info .ambbq-2 {
+  .footer-links .forside-info .ambbq-2 {
     flex-direction: column;
     align-items: center;
     width: 100vw;
   }
-  .forside-info .ambbbq-2 .bbq-pic {
+  .footer-links .forside-info .ambbbq-2 .bbq-pic {
     height: 0;
     width: 0;
   }
-  .ambbq img {
+  .footer-links .ambbq img {
     display: none;
   }
-  .nav-links {
+  .footer-links .nav-links {
     width: 100%;
     gap: 10%;
   }
-  .forside-info .ambbq-2 .inner-element {
+  .footer-links .forside-info .ambbq-2 .inner-element {
     height: 100%;
+  }
+  footer {
+    height: auto;
+  }
+  .nav-links {
+    max-width: 100%;
+  }
+  .navbar .nav-links li .nav-link {
+    font-size: 12px;
+    align-self: center;
   }
 }
 @media screen and (max-width: 600px) {
@@ -432,7 +420,7 @@ footer {
     gap: 10%;
   }
   footer {
-    height: 40vh;
+    height: auto;
     width: 100%;
   }
   .forside-info {
@@ -472,5 +460,26 @@ footer {
   }
   .forside-info .ambbq-2 .inner-element h2 {
     text-align: center;
+  }
+}
+@media screen and (max-width: 475px) {
+  .nav-links {
+    max-width: 100%;
+  }
+  .navbar .nav-links li .nav-link {
+    font-size: 12px;
+    align-self: center;
+  }
+  .hero .caption h1 {
+    font-size: 40px;
+  }
+  .hero .caption h3 {
+    text-align: center;
+  }
+  .footer-container .footer-links .footer-element h5 {
+    font-size: 15px;
+  }
+  .footer-container .footer-links .footer-element ul li a {
+    font-size: 15px;
   }
 }/*# sourceMappingURL=aboutbbq.css.map */
