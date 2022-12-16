@@ -105,153 +105,160 @@
     align-items: center;
     padding: 0% 16.66%;
     background-size: cover;
+    background-image: url(../../img/smoke33333.png);
+}
 
-    .bg-img {
-        position: absolute;
-        z-index: -1;
-        height: 230vh;
-        filter: brightness(0.15);
-    }
+.bg-img {
+    position: absolute;
+    z-index: -1;
+    height: 230vh;
+    filter: brightness(0.15);
+}
 
-    .ambbq {
-        width: 100vw;
+.ambbq {
+    width: 100vw;
+    display: flex;
+    color: white;
+    background-color: #000000bb;
+    height: 50vh;
+    margin: 10vh 0vh;
+    overflow: hidden;
+
+
+
+    .ambbq-info {
+        padding: 0px 40px;
+        font-family: 'Roboto';
+        width: 60%;
         display: flex;
-        color: white;
-        background-color: #000000bb;
-        height: 50vh;
-        margin: 10vh 0vh;
-        overflow: hidden;
-        
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+        // align-items: space-evenly;
 
-
-        .ambbq-info {
-            padding: 0px 40px;
-            font-family: 'Roboto';
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            justify-content: space-evenly;
-            // align-items: space-evenly;
-
-            h2 {
-                font-size: 50px;
-                font-weight: 500;
-                padding-bottom: 10px;
-                color: #EF722A;
-            }
-
-            p {
-                font-family: 'Montserrat';
-                padding-bottom: 40px;
-                font-size: 18px;
-                font-weight: 300;
-                color: white;
-            }
-
-            .ambbq-readmore-btn {
-                border: 3px solid white;
-                width: 40%;
-                padding: 10px;
-                font-size: 18px;
-                text-align: center;
-                transition: 0.2s;
-                font-weight: 500;
-
-                a {
-                    color: white;
-                    text-decoration: none;
-                }
-
-                &:hover {
-                    border: 3px solid #EF722A;
-                    color: #EF722A88;
-                    background-color: #EF722A;
-                }
-            }
+        h2 {
+            font-size: 50px;
+            font-weight: 500;
+            padding-bottom: 10px;
+            color: #EF722A;
         }
 
-        .ambbq-img {
+        p {
+            font-family: 'Montserrat';
+            padding-bottom: 40px;
+            font-size: 18px;
+            font-weight: 300;
+            color: white;
+        }
+
+        .ambbq-readmore-btn {
+            border: 3px solid white;
             width: 40%;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            transition: 0.2s;
+            font-weight: 500;
 
-            img {
-                background-size: cover;
-                height: 100%;
-                width:100%;
+            a {
+                color: white;
+                text-decoration: none;
             }
-        }
-
-
-
-    }
-
-    // forskellige kategorier/seværdigheder
-    .info-card-headline {
-        color: #EF722A;
-        padding: 20px;
-        font-size: 3vw;
-    }
-
-    .card-container {
-        width: 60vw;
-        height: 50vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 75px;
-
-        .info-card {
-            width: 33%;
-            background-color: blue;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.3s;
 
             &:hover {
-                transform: scale(1.1);
-                color: #EF722A;
+                border: 3px solid #EF722A;
+                color: #EF722A88;
+                background-color: #EF722A;
             }
+        }
+    }
 
-            .info-card-readmore-btn {
+    .ambbq-img-1 {
+        width: 40%;
+        height: 100%;
+        background-image: url(../img/header.jpg);
+        background-position:center center;
+        background-size:cover;
+    }
+    .ambbq-img-2{
+        width:40%;
+        height:100%;
+        background-image:url(../img/meat.jpg);
+        background-position:center center;
+        background-size:cover;
+    }
+
+
+
+}
+
+// forskellige kategorier/seværdigheder
+.info-card-headline {
+    color: #EF722A;
+    padding: 20px;
+    font-size: 3vw;
+}
+
+.card-container {
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+
+    .info-card {
+        width: 33%;
+        background-color: blue;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+            color: #EF722A;
+        }
+
+        .info-card-readmore-btn {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-weight: 500;
+            border: 2px solid white;
+            padding: 10px;
+            width: 75%;
+            text-align: center;
+
+            a {
+                text-decoration: none;
                 color: white;
-                font-family: 'Roboto', sans-serif;
-                font-size: 30px;
-                font-weight: 500;
-                border: 2px solid white;
-                padding: 10px;
-                width: 75%;
-                text-align: center;
-
-                a {
-                    text-decoration: none;
-                    color: white;
-                }
             }
-
-        }
-
-        .kids-que {
-            background-image: url(../img/children.jpg);
-            background-size: cover;
-            background-position: center center;
-        }
-
-        .vintage {
-            background-image: url(../img/retro.jpg);
-            background-size: cover;
-            background-position: center center;
-        }
-
-        .linedance {
-            background-image: url(../img/linedance.jpg);
-            background-size: cover;
-            background-position: center center;
         }
 
     }
+
+    .kids-que {
+        background-image: url(../img/children.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .vintage {
+        background-image: url(../img/retro.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .linedance {
+        background-image: url(../img/linedance.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
 }
+
 
 
 
@@ -295,9 +302,9 @@ footer {
 .footer-element {
     height: 100%;
     padding: 50px;
-    display:flex;
-    flex-direction:column;
-    text-align:left;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .footer-links {
@@ -380,74 +387,101 @@ footer {
 
 //styling til medium
 @media screen and (max-width:1300px) {
-    .forside-info .ambbq .ambbq-info .text h2{
-        font-size:30px;
+    .forside-info .ambbq .ambbq-info .text h2 {
+        font-size: 30px;
     }
-    .foot-logo-img{
-        display:none;
+
+    .foot-logo-img {
+        display: none;
     }
-    .footer-logo{
-        display:none;
+
+    .footer-logo {
+        display: none;
     }
-    .footer-links{
-        justify-content:space-evenly;
-        width:100%;
+
+    .footer-links {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .forside-info .card-container {
+        width: 100vw;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .forside-info .card-container .info-card {
+        width: 100%;
+        height: 25vh;
     }
 }
-@media screen and (max-width:1000px){
-     .forside-info .ambbq .ambbq-info .text h2{
-        font-size:25px;
+
+@media screen and (max-width:1000px) {
+    .forside-info .ambbq .ambbq-info .text h2 {
+        font-size: 25px;
     }
+
     .forside-info .ambbq .ambbq-info .text p {
-        font-size:15px;
+        font-size: 15px;
     }
-    .forside-info .ambbq{
-        flex-direction:column;
-        height:auto;
+
+    .forside-info .ambbq {
+        flex-direction: column;
+        height: auto;
     }
-    .forside-info .ambbq .ambbq-info{
-        width:100%;
-        padding:10px;
+
+    .forside-info .ambbq .ambbq-info {
+        width: 100%;
+        padding: 10px;
     }
-    
-    .forside-info .ambbq .ambbq-img img{
-        display:none;
+
+    .forside-info .ambbq .ambbq-img img {
+        display: none;
     }
-    .forside-info .bg-img{
-        height:250vh;
+
+    .forside-info .bg-img {
+        height: 250vh;
     }
-    .forside-info .card-container{
-        width:100vw;
-        flex-direction:column;
-        height:100vh;
+
+    .forside-info .card-container {
+        width: 100vw;
+        flex-direction: column;
+        height: 100vh;
     }
-    .forside-info .card-container .info-card{
-            width:100%;
-            height:25vh;
+
+    .forside-info .card-container .info-card {
+        width: 100%;
+        height: 25vh;
+    }
+
+    .vintage {
+        height: 100%;
+        width: 100%;
+    }
+
+    .footer-links {
+        width: 100vw;
+
+        h5 {
+            font-size: 20px;
         }
-    
-    .vintage{
-        height:100%;
-        width:100%;
     }
-    .footer-links{
-        width:100vw;
-        h5{
-            font-size:20px;
-        }
-    }
+
     .footer-links ul li a {
-        font-size:15px;
+        font-size: 15px;
     }
+
     .nav-links {
         width: 100%;
-        gap:10%;
+        gap: 10%;
     }
-    footer{
-        height:50vh;
+
+    footer {
+        height: auto;
     }
-    .footer-links .footer-element{
-        padding:10px;
+
+    .footer-links .footer-element {
+        padding: 10px;
     }
 }
 
@@ -457,32 +491,49 @@ footer {
 @media screen and (max-width:600px) {
     .nav-links {
         width: 100%;
-        gap:10%;
+        gap: 10%;
     }
+
     .card-container {
         width: 100%;
         height: auto;
-        flex-wrap:wrap;
-    }
-    
-    footer{
-        height:50vh;
-        width:100%;
-    }
-   
-    .footer-container .footer-links ul li a{
-        width:50%;
-    }
-    .footer-container .footer-element{
-        padding:0;
-    }
-    .forside-info .ammbq .ambbq-info .ambbq-readmore-btn a{
-        letter-spacing:0px;
-        width:100%;
+        flex-wrap: wrap;
     }
 
+    footer {
+        height: auto;
+        width: 100%;
+    }
 
+    .footer-container .footer-links ul li a {
+        width: 50%;
+    }
 
+    .footer-container .footer-element {
+        padding: 0;
+    }
 
+    .forside-info .ammbq .ambbq-info .ambbq-readmore-btn a {
+        letter-spacing: 0px;
+        width: 100%;
+    }
+}
+@media screen and (max-width:450px) {
+    .nav-links {
+        max-width: 100%;
+        
+        // gap: 10%;
+    }
+    .navbar .nav-links li .nav-link{
+        font-size:12px;
+        align-self:center;
+    }
+    .forside-info .ammbq .ambbq-info {
+        width: 100%;
+        margin:0;
 
+    }
+    .info-card-headline{
+        font-size:20px;
+    }
 }
