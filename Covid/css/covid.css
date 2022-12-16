@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
@@ -8,79 +9,134 @@
 }
 
 /*---Navbar---*/
-/*---Navbar---*/
 .navbar {
   position: fixed;
   display: flex;
   width: 100%;
-  z-index: 5;
+  z-index: 1;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   flex-direction: column;
 }
+.navbar .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  list-style-type: none;
+  margin: auto;
+  height: 100%;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.navbar .nav-links li {
+  font-family: "Roboto Mono" sans-serif;
+}
+.navbar .nav-links li a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.2s;
+  color: white;
+}
+.navbar .nav-links li a:hover {
+  color: #EF722A;
+}
+.navbar .nav-links li .active {
+  color: #EF722A;
+}
 .navbar .nav-logo {
   width: 100%;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #5a595a;
+  position: relative;
   height: 15vh;
 }
 .navbar .nav-logo img {
   padding: 10px;
 }
-.navbar .navbar-list {
-  display: flex;
-  justify-content: space-evenly;
-  width: 60%;
-  list-style-type: none;
-  margin: auto;
-  height: 100%;
-  padding: 10px;
-}
-.navbar .navbar-list .nav-item {
-  font-family: "Roboto Mono" sans-serif;
-}
-.navbar .navbar-list .nav-item .nav-link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  text-decoration: none;
-  transition: 0.2s;
-  color: white;
-}
-.navbar .navbar-list .nav-item .nav-link:hover {
-  color: #EF722A;
-}
-.navbar .navbar-list .nav-item .active {
-  color: #EF722A;
-}
 
-.navbar .menu-hamburger {
-  display: none;
-  color: black;
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-/*---Header---*/
-.header {
+.hero {
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/covid.jpg);
   background-size: cover;
   display: flex;
   justify-content: flex-end;
-  z-index: -1;
+  z-index: -10;
   align-items: flex-end;
   background-position-y: 85%;
   background-position-x: 100%;
 }
+.hero .hero-img {
+  position: absolute;
+  filter: brightness(30%);
+  height: 100%;
+  width: 100%;
+}
 
+.caption {
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  padding-top: 40vh;
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.caption h1 {
+  font-size: 100px;
+  color: #EF722A;
+  font-weight: 500;
+}
+.caption h3 {
+  color: white;
+  font-size: 40px;
+}
+.caption h3 span {
+  border-bottom: 5px solid #EF722A;
+}
+
+.scrolldown-btn {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.scrolldown-btn::before {
+  -webkit-animation: bounce 1.5s ease infinite;
+          animation: bounce 1.5s ease infinite;
+  color: #EF722A;
+  content: "╲╱";
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 6rem;
+  left: 50%;
+  letter-spacing: -1px;
+  margin-left: -3rem;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;
+  width: 6rem;
+  bottom: 0;
+}
+
+@-webkit-keyframes bounce {
+  50% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-50%);
+  }
+}
 .covidinfo {
   height: 100vh;
   width: 100vw;
@@ -95,7 +151,7 @@
   z-index: -1;
   background-size: cover;
   height: 150vh;
-  filter: brightness(0.15);
+  filter: brightness(0.1);
 }
 
 .container {
@@ -107,20 +163,20 @@
   width: 60vw;
   display: flex;
   color: #EF722A;
-  height: 200vh;
   justify-content: center;
   text-transform: uppercase;
-  font-weight: 600;
-  padding-top: 15vh;
-  padding-bottom: 5vh;
-  font-size: 3rem;
+  font-weight: 500;
+  padding-top: 25vh;
+  align-content: center;
+  font-size: 50px;
+  height: 100vh;
 }
 
 .icon_box {
-  border: solid white 1px;
+  border: solid white 3px;
   background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 30vh;
+  width: 300px;
+  height: 300px;
   margin: 30px 30px;
   display: flex;
   align-self: center;
@@ -128,13 +184,14 @@
   flex-direction: column;
   color: white;
   text-align: center;
-  font-size: 3vh;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
   transition: 0.3s;
+  border-radius: 50%;
 }
 .icon_box:hover {
   transform: scale(1.1);
-  border: 1px solid #EF722A;
+  border: 3px solid #EF722A;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -152,60 +209,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 25vh;
 }
 
 .top {
-  width: 65vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-}
-
-.covid h2 {
-  font-size: 45px;
-  letter-spacing: 7.5px;
-  font-weight: 300;
-  padding-bottom: 10px;
-}
-
-.covid p {
-  font-family: "Montserrat";
-  padding-bottom: 40px;
-  font-size: 18px;
-}
-
-.covid-img {
-  width: 40%;
-}
-
-.card-container {
-  width: 60vw;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 75px;
-}
-
-.info-card {
-  width: 33%;
-  background-color: blue;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-card-readmore-btn {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  border: 2px solid white;
-  padding: 10px;
-  width: 75%;
-  text-align: center;
+  justify-content: space-between;
 }
 
 footer {
@@ -294,43 +307,101 @@ footer {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 900px) {
-  .navbar {
-    padding: 0;
-  }
-  .navbar .logo {
+@media screen and (max-width: 1300px) {
+  .foot-logo-img {
     display: none;
   }
-  .navbar .menu-hamburger {
-    display: block;
+  .footer-logo {
+    display: none;
+  }
+  .footer-links {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .hero .caption h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .footer-links {
+    width: 100vw;
+  }
+  .footer-links h5 {
+    font-size: 20px;
+  }
+  .footer-links ul li a {
+    font-size: 15px;
   }
   .nav-links {
-    top: 0;
-    left: -100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
     width: 100%;
-    height: 100vh;
-    transition: left 0.5s ease;
+    gap: 10%;
   }
-  .nav-links.mobile-menu {
-    left: 0;
+  footer {
+    height: 50vh;
   }
-  .nav-links ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .footer-links .footer-element {
+    padding: 10px;
   }
-  .navbar .nav-links ul li {
-    margin: 25px 0;
-    font-size: 1.2em;
+  .covidinfo .covid {
+    font-size: 30px;
   }
-  .menu-hamburger {
-    display: block;
+  .covidinfo .container .top .icon_box {
+    height: 225px;
+    width: 225px;
+    font-size: 15px;
+  }
+  .covidinfo .container .bottom .icon_box {
+    height: 225px;
+    width: 225px;
+    font-size: 15px;
+  }
+  .hero .caption {
+    padding-top: 50vh;
+  }
+  .hero .caption h1 {
+    font-size: 50px;
+  }
+  .hero .caption h3 {
+    font-size: 20px;
+  }
+  footer {
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav-links {
+    width: 100%;
+    gap: 10%;
+  }
+  .footer-container .footer-links ul li a {
+    width: 50%;
+  }
+  .footer-container .footer-element {
+    padding: 0;
+  }
+  .hero .caption {
+    padding-top: 50vh;
+  }
+  .hero .caption h3 {
+    font-size: 15px;
+  }
+  .covidinfo .covid {
+    padding-top: 5vh;
+  }
+  footer {
+    height: 30h;
+  }
+  .covidinfo .covid {
+    font-size: 30px;
+  }
+  .covidinfo .container .top .icon_box {
+    height: 150px;
+    width: 150px;
+    font-size: 13px;
+  }
+  .covidinfo .container .bottom .icon_box {
+    height: 150px;
+    width: 150px;
+    font-size: 13px;
   }
 }/*# sourceMappingURL=covid.css.map */
